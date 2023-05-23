@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Message Service</title>
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+          crossorigin="anonymous">
+    <style>
+    body {
+     background-color: black;
+    }
+    </style>
+
+    <nav class="navbar navbar-dark bg-dark justify-content-between">
+            <a th:href="@{/index}">
+                <button class="btn btn-primary" type="submit">Back</button>
+            </a>
+    </nav>
+</head>
+
+
+<body>
+<div class="container my-2" align="center">
+
+    <table style="width:80%" border="1"
+           class="table table-striped table-dark">
+        <thead>
+        <tr>
+            <th>#</th>
+            <th>Text</th>
+            <th>Sender</th>
+        </tr>
+        </thead>
+        <tbody>
+
+        <tr th:each="message:${foundMessagesList}">
+            <td th:text="${message.id}"></td>
+            <td th:text="${message.text}"></td>
+            <td th:text="${message.sender}"></td>
+        </tr>
+
+        </tbody>
+    </table>
+</div>
+</body>
+</html>

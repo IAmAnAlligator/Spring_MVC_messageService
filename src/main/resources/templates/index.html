@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Message Service</title>
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+          crossorigin="anonymous">
+    <style>
+    body {
+     background-color: black;
+    }
+    </style>
+
+    <nav class="navbar navbar-dark bg-dark justify-content-between">
+
+        <form class="form-inline" th:action="@{/findMessages}" method="GET">
+
+            <a th:href="@{/deleteMessage}">
+                <button class="btn btn-outline-danger mr-2" type="button">Delete</button>
+            </a>
+
+            <button class="btn btn-outline-primary mr-2" type="submit">Filter</button>
+            <input type="search" class="form-control" th:name="sender" placeholder="Sender name">
+
+        </form>
+
+        <form class="form-inline" action="#" th:action="@{/saveMessage}" th:object="${message}"
+              method="POST">
+            <input class="form-control mr-sm-2" th:field="*{text}" type="text" placeholder="Text">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Add</button>
+        </form>
+
+    </nav>
+
+</head>
+
+
+<body>
+<div class="container my-2" align="center">
+
+    <table style="width:80%" border="1"
+           class="table table-striped table-dark">
+        <thead>
+        <tr>
+            <th>#</th>
+            <th>Text</th>
+            <th>Sender</th>
+
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="message:${messagesList}">
+            <td th:text="${message.id}"></td>
+            <td th:text="${message.text}"></td>
+            <td th:text="${message.sender}"></td>
+        </tr>
+
+        </tbody>
+    </table>
+</div>
+</body>
+</html>
