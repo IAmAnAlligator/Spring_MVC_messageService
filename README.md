@@ -18,6 +18,7 @@
 ## Technologies Used
 - Java - version 17
 - Spring Boot - version 3
+- Hibernate - version 6
 - PostgreSQL - version 9
 - Thymeleaf - version 3
 - Bootstrap - version 4
