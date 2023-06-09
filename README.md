@@ -12,10 +12,12 @@
 
 
 ## General Information
-- The Spring Boot message service 
+This project is simple Spring Boot message service. 
 
 
 ## Technologies Used
+Project is created with:
+
 - Java - version 17
 - Spring Boot - version 3
 - Hibernate - version 6
