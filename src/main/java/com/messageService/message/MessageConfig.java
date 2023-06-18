@@ -14,8 +14,8 @@ public class MessageConfig {
         return args -> {
 
            Message one = new Message(1, "Good morning, everyone.", "Jennifer");
-           Message two = new Message(2, "Meeting every Monday at 10 a.m.", "Bryan");
-           Message three = new Message(3,"Janitor has found keys at the meeting room.", "Bonnie");
+           Message two = new Message(2, "We have a meeting every Monday at 10 a.m.", "Bryan");
+           Message three = new Message(3,"A janitor has found keys at the meeting room.", "Bonnie");
 
            repository.saveAll(List.of(one, two, three));
 
