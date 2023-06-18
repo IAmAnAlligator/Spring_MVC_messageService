@@ -12,7 +12,7 @@
 
 
 ## General Information
-This project is simple Spring Boot message service. 
+This project is a simple Spring Boot message service. 
 
 
 ## Technologies Used
@@ -40,7 +40,7 @@ Project is created with:
 
 
 ## Project Status
-Project is: _complete_ 
+Project is: _completed_ 
 
 
 
